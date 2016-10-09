@@ -2,8 +2,7 @@ import java.util.Scanner;
 public class equation {
     public static void main(String[] args) {
         System.out.println("Решение уравнения \"a*x+b=0\"");
-        Scanner sc = new Scanner(System.in);
-        sc.useDelimiter("\n");
+        Scanner sc = new Scanner(System.in).useDelimiter("[\r\n]+");
         float a, b;
         while (true) {
             System.out.println("Введите \"a\" и нажмите Enter:");
