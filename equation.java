@@ -8,12 +8,16 @@ public class equation {
     public static void main(String[] args) {
         System.out.println("Решение уравнения \"a*x+b=0\"");
         float a = inputNum("a");
-        if (a == 0) {
-            System.out.println("\"x\" равен любому значению");
+        float b = inputNum("b");
+        if (a == 0 && b == 0) {
+            System.out.println("\n\"x\" равен любому значению");
+        } else if (a == 0) {
+            System.out.println("\nРешений нет");
+        } else if (b == 0) {
+            System.out.println("\n\"x\" равен 0");
         } else {
-            float b = inputNum("b");
-            float x = (-b) / a;
-            System.out.println("\"x\" равен " + x);
+            float x = -b / a;
+            System.out.println("\n\"x\" равен " + x);
         }
         sc.close();
     }
@@ -24,7 +28,7 @@ public class equation {
             System.out.println("Введите \"" + n + "\" и нажмите Enter:");
             if (sc.hasNextFloat()) {
                 k = sc.nextFloat();
-                System.out.println("Ввол \"" + n + "\" закончен");
+                System.out.println("Ввод \"" + n + "\" закончен");
                 break;
             } else {
                 System.out.println("\"" + n + "\" должно быть числом!");
